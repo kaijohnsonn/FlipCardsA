@@ -12,10 +12,10 @@
 
 using namespace std;
 
-Card::Card()
+Card::Card(int value, string suit)
 {
-    value = 0;
-    suit = "";
+    value = value;
+    suit = suit;
 }
 
 int Card::setValue(const int& cardValue)
@@ -40,5 +40,6 @@ string Card::getSuit()
 
 Code::Code operator<<()
 {
-
+    ostr << Resp.getSuit() << ", " << Resp.getValue();
+    retrun ostr;
 }

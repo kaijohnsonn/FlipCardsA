@@ -12,25 +12,19 @@ using namespace std;
 class Card
 {
 private:
-    int value;
+    string value;
     string suit;
 
 public:
-    Card();
+    Card(int value, string suit);
 
-    int setValue();
-    string setSuit();
+    string setValue(const int& cardValue);
+    string setSuit(const string& cardSuit);
 
-    int getValue();
+    string getValue();
     string getSuit();
 
-    Code::Code operator<<(); // NEED TO PUT PARAMETER VALUES
+    friend ostream& operator<<(ostream& ostr, const Card& Resp);
 
 };
-
-A card includes a value and a suit (club, diamond, heart or spade).
-The class should at least include
-        (1) a constructor,
-(2) setValue() and setSuit() functions,
-(3) getValue() and getSuit() functions,
-(4) an overloaded << operator to print a card’s value and suit.
+#endif CARD_H
